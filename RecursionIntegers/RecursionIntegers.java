@@ -16,7 +16,7 @@
  	 * This method prints the integers from 0 to n both inclusive, on separate lines
  	 * using recursion 
      * Algorithm: base condition is at n = 0
-     * Changing the n (decrementing by 1 each time)
+     * Changing the n (decrementing by 1 each time) and calling the function/itself with decremented n
      * it will print the 0 first, and then going back up the recursion stack, n will no longer be
      * 0, and it will go to after "printNum(n-1)" because the previous are already executed
      * -> printing n itself
