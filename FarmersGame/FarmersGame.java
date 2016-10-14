@@ -138,6 +138,18 @@
   	
   	}
   	
+  	/** 
+  	 * Error Handeling method to check the user's guesses
+  	 *
+  	 *
+  	 */
+  	public static boolean validMove1(String move)
+  	{
+  		if ( (move.
+  	
+  	
+  	}
+  	
   	/**
   	 * Moves the objects from one bank to the other based on the user's choice
   	 * Toggles the cabb/human/wolf/sheep between true and false to flip between the banks
