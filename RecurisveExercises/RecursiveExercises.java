@@ -14,6 +14,7 @@
  		System.out.println(hasDigit("0d"));
 		System.out.println(hasDigit("bc33"));
 		System.out.println(hasDigit("ddeebcd"));
+		System.out.println(hasDigit(""));
 		
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"); //iterative w/charAt
 		System.out.println(isPalindromeIC("abcba"));
@@ -55,7 +56,9 @@
 	{
 		for (int count = 0; count < s.length(); count++)
 		{
-			if (((int)s.charAt(count) >= 48) && ((int)s.charAt(count) <= 57))
+			int c = (int) s.charAt(count);
+			
+			if ((c >= 48) && (c <= 57))
 			{
 				return true;
 		
@@ -77,7 +80,7 @@
 		int index0 = 0;
 		int index1 = s.length()-1;
 		
-		while((index0 <= s.length()-1) && (index1 >= 0))
+		while (index0 < index1)
 		{
 			if((s.charAt(index0)) != (s.charAt(index1)))
 				return false;
@@ -86,6 +89,7 @@
 		}
 		return true;
 	}
+	
  	/** 
 	 * This method takes in a String and returns true if the given String is a palindrome.
 	 * @param s the String to check whether it is a palindrome
@@ -117,7 +121,7 @@
  		int index0 = 0;
  		int index1 = s.length()-1;
  		
- 		while(!(index0 == index1) && !(index0+1 == index1))
+ 		while(index0 < index1)
  		{
  			if (!(s.substring(index0, index0+1).equals(s.substring(index1, index1+1))))
 			{
