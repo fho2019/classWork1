@@ -6,6 +6,10 @@
  
  public class RecursionIntegers
  {
+ 	/**
+ 	 * This is a main method calling printNum 
+ 	 * @param args This is a command line argument
+ 	 */
  	public static void main (String[] args)
  	{
  		//call to printNum method with a primitive int
