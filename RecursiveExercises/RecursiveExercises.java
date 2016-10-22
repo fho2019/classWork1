@@ -9,7 +9,7 @@
  	
  	/**
  	 *
- 	 * This is a main method calling printNum 
+ 	 * This is a main method calling methods below
  	 * @param args This is a command line argument
  	 */
  	 */
