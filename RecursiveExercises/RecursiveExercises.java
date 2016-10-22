@@ -7,6 +7,12 @@
  public class RecursiveExercises
  {
  	
+ 	/**
+ 	 *
+ 	 * This is a main method calling printNum 
+ 	 * @param args This is a command line argument
+ 	 */
+ 	 */
  	public static void main(String args[])
  	{
  		
@@ -99,13 +105,13 @@
  	public static boolean isPalindromeRC(String s)
  	{
  		if ((s.length() == 0) || s.length() == 1) //base condition
- 		{
+ 		
  			return true;
- 		}
+ 		
  		else if (s.charAt(0) == s.charAt(s.length()-1))
- 		{
+ 		
  			return isPalindromeRC(s.substring(1, s.length()-1));
- 		}	
+ 		
  		return false;
  	}
  	
