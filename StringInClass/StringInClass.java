@@ -37,7 +37,8 @@ public class StringInClass
 		System.out.println(convertItalics("This is _very_ good."));
 		System.out.println(convertItalics("_This_ is _very_ _good_."));
 		System.out.println(convertItalics("This is _very good."));
-		System.out.println(convertItalics("This is ___very good." ));
+		System.out.println(convertItalics("This is __very good." ));
+		System.out.println(convertItalics("I___am_arobot"));
 	}
 	
 	/**
@@ -133,6 +134,7 @@ public class StringInClass
 
     	int count1 = countStrings (line, "_");
     	
+    	
     	if (count1 % 2 == 1)
     	{
     		return line;
@@ -140,19 +142,37 @@ public class StringInClass
     	
     	else
     	{
+    		int next = 0; 
+    		String italics = "<I>";
+    		
 			for (int count = 0; count < count1; count++)
 			{
 				
-				int next = findString(line, "_", 0); //finds where the first instance of the underscore is
+				next = findString(line, "_", next); //finds where the first instance of the underscore is
 				
-				String italics = "<I>";
-			
-				if (count % 2 != 0)
+				if (line.substring(next+1, next+2).equals("_"))
 				{
-					italics = "</I>";
+					count += 1;
+					next += 2;
+				
 				}
 				
-				line = line.substring(0, next) + italics + line.substring(next+1);
+				else
+				{
+					if (count % 2 != 0)
+					{
+						italics = "</I>";
+					
+					}
+				
+					else
+					{
+						italics = "<I>";
+					}
+					line = line.substring(0, next) + italics + line.substring(next+1);
+				}
+				
+				
 				
 			}
 			return line;
