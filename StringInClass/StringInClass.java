@@ -31,6 +31,7 @@ public class StringInClass
 		System.out.println(countStrings("abababab", "abab"));
 		System.out.println(countStrings("", "ab"));
 		System.out.println(countStrings("", "")); 
+		System.out.println(countStrings("abcf", "abc")); 
 		
 		System.out.println("*************************************************");
 		//Calls to the convertItalics method

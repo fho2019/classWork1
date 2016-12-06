@@ -137,18 +137,7 @@
   		return true; //on the same side
   	
   	}
-  	
-  	/** 
-  	 * Error Handeling method to check the user's guesses
-  	 *
-  	 *
-  	 */
-  	public static boolean validMove1(String move)
-  	{
-  		if ( (move.
-  	
-  	
-  	}
+  
   	
   	/**
   	 * Moves the objects from one bank to the other based on the user's choice

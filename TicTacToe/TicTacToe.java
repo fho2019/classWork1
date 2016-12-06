@@ -219,25 +219,27 @@
  			//the user's choice in
  			
  			//error handling
- 			if (currPlay < 0 || currPlay > (board.length * board.length) || !board[row][col].equals(""))
+ 			while (currPlay < 0 || currPlay > (board.length * board.length) || !board[row][col].equals(""))
  			//must be greater than 0, must be within the boundaries of the board, and 
  			//must also be a space that has not been taken yet (empty string)
  			{
  				System.out.print("Sorry! You cannot play your piece there. Please reselect.");
  				currPlay = Integer.parseInt(kb.nextLine());
+ 				row = currPlay/ board.length; //formula for finding the row to put the 
+ 				//user's choice in --> reset
+ 				col = currPlay % board.length; //formula for finding the column to put 
+ 				//the user's choice in
  			}
  			
- 			else //place down the piece
- 			{
- 				if (currentPlayer == 0)
- 				{
- 					board[row][col] = pS1; //place symbol 1 in the appropriate space
- 				}
- 				else
- 				{
- 					board[row][col] = pS2; //place symbol 2 in the appropriate space
- 				}
- 			}
+ 			//place down the piece
+			if (currentPlayer == 0)
+			{
+				board[row][col] = pS1; //place symbol 1 in the appropriate space
+			}
+			else
+			{
+				board[row][col] = pS2; //place symbol 2 in the appropriate space
+			}
  			
  			//checking if there is a winner and setting status of the game to this
  			status = checkWinner(pS1, pS2); 
